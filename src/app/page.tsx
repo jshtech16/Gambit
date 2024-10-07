@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ThemeToggle from "../components/theme";
 
 export default function Home() {
   return (
@@ -20,8 +21,10 @@ export default function Home() {
             </code>
             .
           </li>
-          <li>Save and see your changes instantly.</li>
+          <li className="">Save and see your changes instantly.</li>
         </ol>
+
+        {/* <ThemeToggle /> */}
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
