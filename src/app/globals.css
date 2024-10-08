@@ -14,14 +14,59 @@
   }
 }
 
+@font-face {
+  font-family: 'IntegralCF';
+  src: url('/fonts/Integral-CF/Demo_Fonts/Fontspring-DEMO-integralcf-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.gradiant-btn {
+  background:
+    linear-gradient(#000000 0 0) padding-box,
+    linear-gradient(180deg, #BFF816, #243000) border-box;
+  border: 1px solid transparent;
+  display: inline-block;
+}
+
+.progress{
+  position: relative;
+  margin: 4px;
+  float:left;
+  text-align: center;
+}
+
+.barOverflow{
+  position: relative;
+  overflow: hidden;
+  width: 66px; height: 33px;
+  margin-bottom: -16px;
+}
+.bar{
+  position: absolute;
+  top: 0; left: 0;
+  width: 66px; height: 66px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 5px solid #eee;
 }

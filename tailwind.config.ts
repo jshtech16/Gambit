@@ -12,6 +12,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        yellow: '#BFF816',
+        success: '#36B208',
+        red: '#FF0000'
       },
     },
   },

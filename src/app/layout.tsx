@@ -2,17 +2,23 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import { Poppins } from 'next/font/google';
+import Carousel from "@/components/Carousel";
+import SlickTabs from "@/components/SlickTabs";
+import BetList from "@/components/Betlist";
+import News from "@/components/News";
+import Footer from "@/components/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
+const integralCF = localFont({
+  src: './fonts/Integral-CF/Demo_Fonts/Fontspring-DEMO-integralcf-regular.otf',
+  weight: '400, 700',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,11 +32,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.variable}`}>
         <Navbar />
-        {children}
+        <div className="bg-black px-[30px]">
+          <Carousel />
+          <SlickTabs />
+          <BetList />
+          <News />
+        </div>
+        <Footer />
+        {/* {children} */}
       </body>
     </html>
   );
