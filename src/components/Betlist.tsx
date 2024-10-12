@@ -18,67 +18,33 @@ const BetList = () => {
 
     return (
         <div>
-            <div className="flex gap-5 flex-wrap justify-between mt-[32px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 4xl:grid-cols-6 5xl:grid-cols-7 gap-5 mt-[32px]">
                 {datas.map((data, index) => (
                     data ? (
-                        <div className="flex-1 bg-[linear-gradient(107.7deg,rgba(0,0,0,0)_37.9%,rgba(96,4,213,0.2)_113.22%),linear-gradient(248.12deg,rgba(24,20,32,0)_35.67%,#292929_101.76%)] rounded-lg pt-5 min-w-[350px]" key={index}>
+                        <div className="flex-1 bg-[linear-gradient(107.7deg,rgba(0,0,0,0)_37.9%,rgba(96,4,213,0.2)_113.22%),linear-gradient(248.12deg,rgba(24,20,32,0)_35.67%,#292929_101.76%)] rounded-lg pt-5" key={index}>
                             <div className="flex items-center gap-3 px-5">
                                 <img src="/assets/img/bet.png" alt="" />
                                 <p className="text-sm text-[#FFFFFF]">Presidential Election Winner 2024</p>
                             </div>
                             <div className="flex flex-col gap-1 mt-4 h-[75px] overflow-y-scroll hide-scroll px-5">
-                                <div className="flex justify-between">
-                                    <p className="text-sm text-white font-medium">Kamala Haris</p>
-                                    <div className="flex gap-2 items-center">
-                                        <p className="text-sm text-white font-medium">50%</p>
-                                        <button className="text-[#BFF816] text-xs font-medium bg-[rgba(54,178,8,0.2)] rounded-md px-2 py-1">Yes</button>
-                                        <button className="text-red text-xs font-medium bg-[rgba(255,0,0,0.1)] rounded-lg px-2 py-1">No</button>
-                                    </div>
-                                </div>
-                                <div className="flex justify-between">
-                                    <p className="text-sm text-white font-medium">Kamala Haris</p>
-                                    <div className="flex gap-2 items-center">
-                                        <p className="text-sm text-white font-medium">50%</p>
-                                        <button className="text-[#BFF816] text-xs font-medium bg-[rgba(54,178,8,0.2)] rounded-md px-2 py-1">Yes</button>
-                                        <button className="text-red text-xs font-medium bg-[rgba(255,0,0,0.1)] rounded-lg px-2 py-1">No</button>
-                                    </div>
-                                </div>
-                                <div className="flex justify-between">
-                                    <p className="text-sm text-white font-medium">Kamala Haris</p>
-                                    <div className="flex gap-2 items-center">
-                                        <p className="text-sm text-white font-medium">50%</p>
-                                        <button className="text-[#BFF816] text-xs font-medium bg-[rgba(54,178,8,0.2)] rounded-md px-2 py-1">Yes</button>
-                                        <button className="text-red text-xs font-medium bg-[rgba(255,0,0,0.1)] rounded-lg px-2 py-1">No</button>
-                                    </div>
-                                </div>
-                                <div className="flex justify-between">
-                                    <p className="text-sm text-white font-medium">Kamala Haris</p>
-                                    <div className="flex gap-2 items-center">
-                                        <p className="text-sm text-white font-medium">50%</p>
-                                        <button className="text-[#BFF816] text-xs font-medium bg-[rgba(54,178,8,0.2)] rounded-md px-2 py-1">Yes</button>
-                                        <button className="text-red text-xs font-medium bg-[rgba(255,0,0,0.1)] rounded-lg px-2 py-1">No</button>
-                                    </div>
-                                </div>
-                                <div className="flex justify-between">
-                                    <p className="text-sm text-white font-medium">Kamala Haris</p>
-                                    <div className="flex gap-2 items-center">
-                                        <p className="text-sm text-white font-medium">50%</p>
-                                        <button className="text-[#BFF816] text-xs font-medium bg-[rgba(54,178,8,0.2)] rounded-md px-2 py-1">Yes</button>
-                                        <button className="text-red text-xs font-medium bg-[rgba(255,0,0,0.1)] rounded-lg px-2 py-1">No</button>
-                                    </div>
-                                </div>
-                                <div className="flex justify-between">
-                                    <p className="text-sm text-white font-medium">Kamala Haris</p>
-                                    <div className="flex gap-2 items-center">
-                                        <p className="text-sm text-white font-medium">50%</p>
-                                        <button className="text-[#BFF816] text-xs font-medium bg-[rgba(54,178,8,0.2)] rounded-md px-2 py-1">Yes</button>
-                                        <button className="text-red text-xs font-medium bg-[rgba(255,0,0,0.1)] rounded-lg px-2 py-1">No</button>
-                                    </div>
-                                </div>
+                                {
+                                    [0, 0, 0, 0, 0, 0, 0, 0, 0].map((ele, idx) => (
+                                        <div className="flex justify-between" key={idx}>
+                                            <p className="text-sm text-white font-medium">Kamala Haris</p>
+                                            <div className="flex gap-2 items-center">
+                                                <p className="text-sm text-white font-medium">50%</p>
+                                                <button className="text-[#BFF816] hover:text-white text-xs font-medium bg-[rgba(54,178,8,0.2)] hover:bg-[#00DD00] rounded-md px-2 py-1">Yes</button>
+                                                <button className="text-red hover:text-white text-xs font-medium bg-[rgba(255,0,0,0.1)] hover:bg-red rounded-lg px-2 py-1">No</button>
+                                            </div>
+                                        </div>
+                                    ))
+                                }
                             </div>
                             <div className="flex justify-between px-5 py-2 bg-[linear-gradient(0deg,rgba(35,34,36,0.8),rgba(35,34,36,0.8)),linear-gradient(248.12deg,rgba(24,20,32,0)_35.67%,#292929_101.76%),linear-gradient(106.24deg,rgba(0,0,0,0)_38.72%,rgba(96,4,213,0.5)_104.16%)] rounded-b-lg">
                                 <div className="flex gap-2">
-                                    <img src="/assets/img/icons/pin.svg" alt="" />
+                                    <div className="bg-[rgba(191,248,16,0.2)] w-[20px] h-[20px] flex justify-center items-center rounded-md">
+                                        <img src="/assets/img/icons/pin.svg" alt="" />
+                                    </div>
                                     <p className="text-sm text-white">$1.1b Vol.</p>
                                 </div>
                                 <div className="flex gap-2">
@@ -90,7 +56,7 @@ const BetList = () => {
                             </div>
                         </div>
                     ) : (
-                        <div className="flex-1 bg-[linear-gradient(107.7deg,rgba(0,0,0,0)_37.9%,rgba(96,4,213,0.2)_113.22%),linear-gradient(248.12deg,rgba(24,20,32,0)_35.67%,#292929_101.76%)] rounded-lg pt-5 min-w-[350px]" key={index}>
+                        <div className="flex-1 bg-[linear-gradient(107.7deg,rgba(0,0,0,0)_37.9%,rgba(96,4,213,0.2)_113.22%),linear-gradient(248.12deg,rgba(24,20,32,0)_35.67%,#292929_101.76%)] rounded-lg pt-5" key={index}>
                             <div className="flex items-start gap-3 px-5">
                                 <img src="/assets/img/bet.png" alt="" />
                                 <p className="text-sm text-[#FFFFFF]">Will Israel invade Lebanon before November?</p>
@@ -108,7 +74,9 @@ const BetList = () => {
                             </div>
                             <div className="flex justify-between px-5 py-2 bg-[linear-gradient(0deg,rgba(35,34,36,0.8),rgba(35,34,36,0.8)),linear-gradient(248.12deg,rgba(24,20,32,0)_35.67%,#292929_101.76%),linear-gradient(106.24deg,rgba(0,0,0,0)_38.72%,rgba(96,4,213,0.5)_104.16%)] rounded-b-lg">
                                 <div className="flex gap-2">
-                                    <img src="/assets/img/icons/pin.svg" alt="" />
+                                    <div className="bg-[rgba(191,248,16,0.2)] w-[20px] h-[20px] flex justify-center items-center rounded-md">
+                                        <img src="/assets/img/icons/pin.svg" alt="" />
+                                    </div>
                                     <p className="text-sm text-white">$1.1b Vol.</p>
                                 </div>
                                 <div className="flex gap-2">

@@ -32,8 +32,8 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ val }) => {
             </div>
             <p className='text-sm text-white font-medium'>
                 <span ref={valRef}>{val}</span>%
-                <p className='text-sm text-[#535353]'>Chance</p>
             </p>
+            <p className='text-sm text-[#535353]'>Chance</p>
         </div>
     );
 };

@@ -1,57 +1,20 @@
 const SlickTabs = () => {
+
+    const topics = ['New', 'Breaking News', 'US Elections', 'VIP Debate', 'Hezbullah', 'Mention Markets', 'Middle East', 'Swing States', 'Kamala', 'Senate Races', 'House Races', 'Eric Adams', 'Trump Trials', 'Hunter Biden', 'Ukraine',]
+
     return (
-        <div className="pb-4 flex gap-3 w-full">
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-[14px] py-[8px] mt-4">Top</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">For You</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">New</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">Breaking News</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">US Elections</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">VIP Debate</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">Hezbullah</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">Mention Markets</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">Middle East</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">Swing States</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">Kamala</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">Senate Races</button>
-            </div>
-            {/* <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">House Races</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">Eric Adams</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">Trump Trials</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">Hunter Biden</button>
-            </div>
-            <div>
-                <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-full px-4 py-1 mt-4">Ukraine</button>
-            </div> */}
+        <div className="flex gap-3 w-full mt-5 overflow-x-scroll hide-scroll">
+            <button className="text-white bg-[#6C3DB8] rounded-xl px-[24px] py-2 flex justify-center items-center gap-2 text-xs xl:text-xl font-medium">
+                <img src="/assets/img/icons/top.svg" alt="" />Top
+            </button>
+            <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-xl px-[24px] py-2 flex justify-center items-center gap-2 whitespace-nowrap text-xs xl:text-xl font-medium">
+                <img src="/assets/img/icons/stars.svg" alt="" />For You
+            </button>
+            {
+                topics.map((ele, idx) => (
+                    <button className="text-white bg-[rgba(217,217,217,0.1)] rounded-xl px-[14px] py-1 whitespace-nowrap text-xs xl:text-xl font-medium" key={idx}>{ele}</button>
+                ))
+            }
         </div>
     )
 }

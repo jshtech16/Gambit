@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -16,7 +19,7 @@
 
 @font-face {
   font-family: 'IntegralCF';
-  src: url('/fonts/Integral-CF/Demo_Fonts/Fontspring-DEMO-integralcf-regular.otf') format('opentype');
+  src: url('./fonts/Integral-CF/Demo_Fonts/Fontspring-DEMO-integralcf-regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
@@ -41,12 +44,38 @@ body::-webkit-scrollbar {
   }
 }
 
+.font-integralcf {
+  font-family: 'IntegralCF', sans-serif;
+}
+
 .gradiant-btn {
   background:
     linear-gradient(#000000 0 0) padding-box,
     linear-gradient(180deg, #BFF816, #243000) border-box;
   border: 1px solid transparent;
   display: inline-block;
+}
+
+.live-anim {
+  width: 7px;
+  height: 7px;
+  background-color: #FF0000;
+  border-radius: 100%;
+  animation-name: live-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes live-animation {
+  0% {
+    background-color: #FF0000;
+  }
+  50% {
+    background-color: #551a1a;
+  }
+  100% {
+    background-color: #FF0000;
+  }
 }
 
 .progress{

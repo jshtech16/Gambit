@@ -3,7 +3,6 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   darkMode: 'class',
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -16,6 +15,14 @@ const config: Config = {
         success: '#36B208',
         red: '#FF0000'
       },
+      screens: {
+        '3xl': '1920px',
+        '4xl': '2560px',
+        '5xl': '3200px',
+        '6xl': '3840px',
+        '7xl': '4480px',
+        '8xl': '5120px'
+      }
     },
   },
   plugins: [],
